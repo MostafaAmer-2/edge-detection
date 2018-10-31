@@ -8,11 +8,11 @@ GT = imageio.imread("./lena_edges.png") / 255.0
 
 def model(input_img):
 	"""Function to predict the edges of Lena.
-	Input: 1x512x512x3 dimensional image of Lena. [dtype: tf.float32 [0..1]]
-	Output 1x512x512x1 dimensional gray scale image of Lena [dtype: tf.float32 [0..1]]
+	Input: 1x512x512x3 dimensional image of Lena. [dtype: tf.float32]
+	Output 1x512x512x1 dimensional gray scale image of Lena [dtype: tf.float32]
 	"""
 	
-	# Please replace the next line with your custom code here and add some describing comments
+	# Please replace the next line with your custom code and add some describing comments
 	output_tensor_op = tf.layers.conv2d(input_img, filters=1, kernel_size=3, strides=1, padding='same', name="conv")
 	
 	return output_tensor_op
